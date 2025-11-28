@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el Número - Neon Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Adivina el <span class="highlight">Número</span></h1>
+            <div class="stats-bar">
+                <div class="stat">Nivel: <span id="level">1</span></div>
+                <div class="stat">Puntos: <span id="score">0</span></div>
+            </div>
+        </header>
+
+        <main id="game-area">
+            <div id="message-area" class="message">¡Adivina un número entre <span id="min-range">1</span> y <span
+                    id="max-range">10</span>!</div>
+
+            <div class="input-group">
+                <input type="number" id="guess-input" placeholder="?" autocomplete="off">
+                <button id="guess-btn">Adivinar</button>
+            </div>
+
+            <div class="feedback">
+                <p>Intentos restantes: <span id="attempts">5</span></p>
+                <p id="hint" class="hint-text">Empieza el juego...</p>
+            </div>
+        </main>
+
+        <section id="leaderboard" class="hidden">
+            <h2>🏆 Mejores Jugadores</h2>
+            <ul id="high-scores-list"></ul>
+            <div class="input-group" id="name-input-group">
+                <input type="text" id="player-name" placeholder="Tu Nombre" maxlength="10">
+                <button id="save-score-btn">Guardar</button>
+            </div>
+            <button id="restart-btn" class="secondary-btn hidden">Jugar de Nuevo</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
